@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOPA</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial;
+        }
+        mark {
+            background-color: rgb(196, 15, 151);
+        }
+        address{
+            color: red
+        }
+        
+    </style>
+</head>
+<body>
+    <p>
+        <h1>tags que não tem mais função</h1>
+        fundo branco dói os olhos &#x1F629; <br>
+        Eu gosto de <b>poesia</b>, e música <strong>indie.</strong> <br> <!--a tag 'b' pode ser desconsiderada mesmo podendo ser usada, é recomendável usar 'strong' no HTML5-->
+        Tenho <u>dezoito anos</u>, nasci na data: <ins>18/02/2006.</ins> <br> <!--a tag 'u' deve ser desconsiderada, usando apenas 'ins'-->
+        Tenho uma <i>calopsita</i> como animal de estimação, mas gostaria também de ter um <em>gato,</em> porém, <!--a tag 'i' não deve ser usada, e sim 'em'.--> <small>tenho alergia a pelos.</small> <br> <!--smal pode ser usada no HTML5...-->
+        <big>SOU LÉSBICA</big> <br> <!--mas, a tag 'big' não.-->
+        <strike>nunca chupei bct</strike>, mas pelo menos sou <ins>feliz.</ins> <br>
+        <del>Ruby Cruz é minha namorada</del> <br> <!--a tag 'strike' já não tem mais a atenção devida, devemos usar 'ins'-->
+        <mark>AMO PEITOS</mark> <!--marca texto-->
+        <sub>são macios</sub> <br><!--elementos no inferior-->
+        <mark>AMO MULHERES</mark>  <sup>mas são difíceis...</sup> <!--elementos no superior--> <br>
+        <q>É de ladinho papai</q> disse o sábio com a blusa do flamengo. <br> <!--citação-->
+       Moro <address>na casa do caralho - 69, Bahia.
+       </address> <!--endereço-->
+       <h1>&darr;AMOR DA MINHA VIDA &darr;</h1>
+       <img src="clairo-london-500.jpg" alt="Foto da clairo"> <br>
+       <bdo dir="rtl">tenho medo de falar com MULHERES</bdo> <br>
+       <blockquote> <abbr title="Amor da vida de ric">Claire Cottrill</abbr> nasceu e viveu por sete anos em Atlanta, Geórgia, morou outros três no estado de Washington, mudando-se depois para Carlisle, <sub>[11]</sub> </blockquote>
+    </p>
+
+    <h1>Código mt louco que não sei o que é, só peguei da net e fds</h1>
+    <h4>(é só pra testar as marcações)</h4>
+
+    <pre><code>const geraAlpha = () => {
+        return String.fromCharCode(65 + Math.floor(Math.random() * 26))
+      }
+      
+      const geraNumero = () => {
+        return Math.floor(Math.random() * 10)
+      }
+      
+      const reduce = Array(4).fill(0).reduce(prev => {
+        return {
+          alpha: prev.alpha + geraAlpha(), 
+          numero: prev.numero+ geraNumero()
+        }
+      }, {alpha: '', numero: ''})
+      
+      console.log(`${reduce.alpha}-${reduce.numero}`) </code></pre>
+</body>
+</html>
