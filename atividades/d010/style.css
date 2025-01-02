@@ -16,8 +16,8 @@
   --cor4: #31332B;
   
   --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-  --fonte-destaque: 'Bebas Neue', cursive;
-  --fonte-especial: 'Android', cursive;
+  --fonte-destaque: 'Bebas Neue', sans-serif;
+  --fonte-especial: 'Android', sans-serif;
 }
 
 *{
