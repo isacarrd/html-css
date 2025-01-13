@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posição de blocos</title>
+  <style>
+    *{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    section#container{
+      position: relative;
+      height: 90vh;
+      background-color: #061ab5;
+    }
+    article#conteudo{
+      position: absolute;
+      height: 300px;
+      width: 400px;
+      background-color: #f7e924;
+
+      top: 50%;
+      left: 50%;
+
+
+      transform: translate(-50%, -50%); /* Esses valores (-50%, -50%) representam respectivamente o eixo X e o eixo Y, ou seja, o primeiro informa para onde o título vai se deslocar na horizontal e o segundo, na vertical. */
+    }
+  
+  </style>
+</head>
+<body>
+  <main>
+    <section id="container">
+      <article id="conteudo">
+          <p>Teste</p>
+      </article>
+    </section>
+  </main>
+</html>
