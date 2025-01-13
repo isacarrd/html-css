@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BackSize</title>
+</head>
+<style>
+  body{
+    /* vh significa "1% da altura da viewport" (janela de visualização).
+    100vh equivale a 100% da altura visível da janela do navegador.
+    Se a janela do navegador tem 800px de altura, 100vh será igual a 800px.
+    Mesmo se o conteúdo da página for menor ou maior que a janela, o elemento com height: 100vh sempre ajustará sua altura para coincidir com a altura da viewport. */
+
+    height: 96vh; /* Sem 100vh, a altura do body dependeria do conteúdo interno, e o fundo poderia não preencher a tela completamente, especialmente em páginas com pouco ou nenhum conteúdo. */
+    background-color: black;
+    background-image: url('imagens/wallpaper002.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main{
+    background-color: white;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 350px;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  main p{
+    padding: 20px;
+  }
+</style>
+<body>
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla ratione sint accusantium ipsum tempora beatae nostrum, reprehenderit ab unde porro optio hic quas, excepturi consectetur. Rerum cupiditate dolorem alias.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla ratione sint accusantium ipsum tempora beatae nostrum, reprehenderit ab unde porro optio hic quas, excepturi consectetur. Rerum cupiditate dolorem alias.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla ratione sint accusantium ipsum tempora beatae nostrum, reprehenderit ab unde porro optio hic quas, excepturi consectetur. Rerum cupiditate dolorem alias.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla ratione sint accusantium ipsum tempora beatae nostrum, reprehenderit ab unde porro optio hic quas, excepturi consectetur. Rerum cupiditate dolorem alias.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nulla ratione sint accusantium ipsum tempora beatae nostrum, reprehenderit ab unde porro optio hic quas, excepturi consectetur. Rerum cupiditate dolorem alias.</p>
+  </main>
+</body>
+</html>
