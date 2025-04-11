@@ -1,3 +1,112 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+*{
+/*Box model stuff*/
+  margin: 0;
+  padding:0;
+/*Typography stuff*/
+  font-size: 1em;
+}
+
+@font-face {
+  font-family: 'Passion One';
+  src: url(/font/Passion_One/PassionOne-Regular.ttf) format(truetype);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+:root{
+/*Miscellaneous*/
+  --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+  --fonte2: 'Passion One', cursive;
+  --fonte3: 'Sriracha', cursive;
+}
+
+header{
+/*Box model stuff*/
+  background-color: black;
+/*Typography stuff*/
+  text-align: center;
+  color: white;
+}
+header h1{
+/*Box model stuff*/
+  padding-top: 50px;
+/*Typography stuff*/
+  font-family: var(--fonte2);
+  font-size: 10vw;
+  font-size: 80px;
+}
+header a{
+/*Typography stuff*/
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+header a:hover{
+/*Typography stuff*/
+  text-decoration: underline;
+}
+header p{
+/*Box model stuff*/
+  padding-bottom: 50px;
+/*Typography stuff*/
+  font-family: var(--fonte1);
+}
+
+section{
+/*Box model stuff*/
+  padding-bottom: 10vw;
+  padding-left: 40px;
+  padding-top: 10vw;
+/*Typography stuff*/
+  font-family: var(--fonte3);
+  font-size: 2.4vw;
+/*Miscellaneous*/
+  line-height: 2em;
+}
+section > p{
+/*Box model stuff*/
+  padding-bottom: 3em;
+}
+
+section#img1{
+/*Box model stuff*/
+  background-image: url(/imagens/background001.jpg);
+  background-position: right center;
+}
+section .imagem{
+/*Box model stuff*/
+  background-attachment: fixed;
+  background-color: #333333;
+  background-size: cover;
+/*Typography stuff*/
+  color: white;
+}
+section .imagem > p{
+/*Display stuff*/
+  display: inline-block;
+/*Box model stuff*/
+  background-color: #00000083;
+}
+
+footer{
+/*Box model stuff*/
+  padding: 15px;
+  background-color: black;
+/*Typography stuff*/
+  font-family: var(--fonte1);
+  font-size: medium;
+  text-align: center;
+  color: white;
+}
+footer a{
+/*Typography stuff*/
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+/*Typography stuff*/
+  text-decoration: underline;
+}
