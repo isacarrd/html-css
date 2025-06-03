@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabelas</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table{
+      width: 500px;
+      border-collapse: collapse;
+    }
+    td, th{
+      border: 1px solid black;
+      padding: 10px;
+    }
+    td{
+      text-align: justify;
+    }
+    thead{
+      background-color: gray;
+      color: white;
+    }
+    span>img{
+      padding-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tabelas grandes</h1>
+  <h2>População dos 5 primeiros do Brasil sla slk</h2>
+  <!--
+    ANATOMIA PARA TABELAS GRANDES
+
+    TABLE
+      THEAD (cabeça)
+        TR, TD, TH
+      TBODY (corpo)
+        TR, TD, TH
+      TFOOT (rodapé)
+        TR, TD, TH
+  -->
+  <table>
+    <thead>
+      <tr>
+        <th>Estado</th>
+        <th>População</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/250px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png" width="20px"></span>São Paulo</td>
+        <td class="hb">45973194</td>
+      </tr>
+      <tr>
+        <td> <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/250px-Bandeira_de_Minas_Gerais.svg.png" width="20px"></span>Minas Gerais</td>
+        <td class="hb">21322691</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/250px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" width="20px"></span>Rio de Janeiro</td>
+        <td class="hb">17219679</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/250px-Bandeira_da_Bahia.svg.png" width="20px"></span>Bahia</td>
+        <td class="hb">14850513</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/250px-Bandeira_do_Paran%C3%A1.svg.png" width="20px"></span>Paraná</td>
+        <td class="hb">11824665</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Total de Habitantes</th>
+        <td id="resultado"></td>
+        <script> /*.textContet acessa o texto dentro do elemento, pois, o getElementsByClassName retorna ELEMENTOS e não o texto presente!!*/
+          let spHab = Number.parseInt(document.getElementsByClassName('hb')[0].textContent)
+          let mgHab = Number.parseInt(document.getElementsByClassName('hb')[1].textContent)
+          let rjHab = Number.parseInt(document.getElementsByClassName('hb')[2].textContent)
+          let baHab = Number.parseInt(document.getElementsByClassName('hb')[3].textContent)
+          let prHab = Number.parseInt(document.getElementsByClassName('hb')[4].textContent)
+
+          let soma = spHab + mgHab + rjHab + baHab + prHab;
+          resultado.innerHTML = soma.toLocaleString('pt-BR')
+        </script>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
