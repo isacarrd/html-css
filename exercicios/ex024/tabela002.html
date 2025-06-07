@@ -9,22 +9,37 @@
       font-family: Arial, Helvetica, sans-serif;
     }
     table{
+      position: relative;
       width: 500px;
       border-collapse: collapse;
+    }
+    tbody tr:nth-child(2n){
+      background-color: lightgray;
     }
     td, th{
       border: 1px solid black;
       padding: 10px;
     }
+    thead, tfoot{
+      color: white;
+      background-color: #303030;
+    }
+    thead > tr > th{
+      position: sticky;
+      top: -1px;
+      background-color: #303030;
+    }
     td{
       text-align: justify;
     }
-    thead{
-      background-color: gray;
-      color: white;
-    }
     span>img{
       padding-right: 5px;
+    }
+    [src]{
+      width: 20px;
+    }
+    caption{
+      padding-bottom: 10px;
     }
   </style>
 </head>
@@ -43,37 +58,126 @@
         TR, TD, TH
   -->
   <table>
+    <caption>Unidades Federativas do Brasil e suas populações.</caption>
     <thead>
       <tr>
-        <th>Estado</th>
-        <th>População</th>
+        <th scope="col">Estado</th>
+        <th scope="col">População</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td> <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/250px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png" width="20px"></span>São Paulo</td>
+        <td> <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bandeira_do_estado_de_S%C3%A3o_Paulo.svg/250px-Bandeira_do_estado_de_S%C3%A3o_Paulo.svg.png"></span>São Paulo</td>
         <td class="hb">45973194</td>
       </tr>
       <tr>
-        <td> <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/250px-Bandeira_de_Minas_Gerais.svg.png" width="20px"></span>Minas Gerais</td>
+        <td> <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Bandeira_de_Minas_Gerais.svg/250px-Bandeira_de_Minas_Gerais.svg.png"></span>Minas Gerais</td>
         <td class="hb">21322691</td>
       </tr>
       <tr>
-        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/250px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png" width="20px"></span>Rio de Janeiro</td>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bandeira_do_estado_do_Rio_de_Janeiro.svg/250px-Bandeira_do_estado_do_Rio_de_Janeiro.svg.png"></span>Rio de Janeiro</td>
         <td class="hb">17219679</td>
       </tr>
       <tr>
-        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/250px-Bandeira_da_Bahia.svg.png" width="20px"></span>Bahia</td>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bandeira_da_Bahia.svg/250px-Bandeira_da_Bahia.svg.png"></span>Bahia</td>
         <td class="hb">14850513</td>
       </tr>
       <tr>
-        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/250px-Bandeira_do_Paran%C3%A1.svg.png" width="20px"></span>Paraná</td>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bandeira_do_Paran%C3%A1.svg/250px-Bandeira_do_Paran%C3%A1.svg.png"></span>Paraná</td>
         <td class="hb">11824665</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bandeira_do_Rio_Grande_do_Sul.svg/480px-Bandeira_do_Rio_Grande_do_Sul.svg.png"></span>Rio Grande do Sul</td>
+        <td class="hb">11229915</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bandeira_de_Pernambuco.svg/480px-Bandeira_de_Pernambuco.svg.png"></span>Pernambuco</td>
+        <td class="hb">9539029</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bandeira_do_Cear%C3%A1.svg/480px-Bandeira_do_Cear%C3%A1.svg.png"></span>Ceará</td>
+        <td class="hb">9233659</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bandeira_do_Par%C3%A1.svg/480px-Bandeira_do_Par%C3%A1.svg.png"></span>Pará</td>
+        <td class="hb">8664306</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bandeira_de_Santa_Catarina.svg/480px-Bandeira_de_Santa_Catarina.svg.png"></span>Santa Catarina</td>
+        <td class="hb">8058441</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_Goi%C3%A1s.svg/480px-Flag_of_Goi%C3%A1s.svg.png"></span>Goiás</td>
+        <td class="hb">7350483</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bandeira_do_Maranh%C3%A3o.svg/480px-Bandeira_do_Maranh%C3%A3o.svg.png"></span>Maranhão</td>
+        <td class="hb">7010960</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bandeira_do_Amazonas.svg/480px-Bandeira_do_Amazonas.svg.png"></span>Amazonas</td>
+        <td class="hb">4281209</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bandeira_da_Para%C3%ADba.svg/480px-Bandeira_da_Para%C3%ADba.svg.png"></span>Paraíba</td>
+        <td class="hb">4145040</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bandeira_do_Esp%C3%ADrito_Santo.svg/480px-Bandeira_do_Esp%C3%ADrito_Santo.svg.png"></span>Espírito Santo</td>
+        <td class="hb">4102129</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bandeira_de_Mato_Grosso.svg/480px-Bandeira_de_Mato_Grosso.svg.png"></span>Mato Grosso</td>
+        <td class="hb">3836399</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bandeira_do_Rio_Grande_do_Norte.svg/480px-Bandeira_do_Rio_Grande_do_Norte.svg.png"></span>Rio Grande do Norte</td>
+        <td class="hb">3445071</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bandeira_do_Piau%C3%AD.svg/480px-Bandeira_do_Piau%C3%AD.svg.png"></span>Piauí</td>
+        <td class="hb">3375646</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Bandeira_de_Alagoas.svg/480px-Bandeira_de_Alagoas.svg.png"></span>Alagoas</td>
+        <td class="hb">3220104</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg/480px-Bandeira_do_Distrito_Federal_%28Brasil%29.svg.png"></span>Distrito Federal</td>
+        <td class="hb">2982818</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bandeira_de_Mato_Grosso_do_Sul.svg/480px-Bandeira_de_Mato_Grosso_do_Sul.svg.png"></span>Mato Grosso do Sul</td>
+        <td class="hb">2901895</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Bandeira_de_Sergipe.svg/480px-Bandeira_de_Sergipe.svg.png"></span>Sergipe</td>
+        <td class="hb">2291077</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bandeira_de_Rond%C3%B4nia.svg/480px-Bandeira_de_Rond%C3%B4nia.svg.png"></span>Rondônia</td>
+        <td class="hb">1746227</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bandeira_do_Tocantins.svg/480px-Bandeira_do_Tocantins.svg.png"></span>Tocantins</td>
+        <td class="hb">1577342</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bandeira_do_Acre.svg/480px-Bandeira_do_Acre.svg.png"></span>Acre</td>
+        <td class="hb">990631</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bandeira_do_Amap%C3%A1.svg/480px-Bandeira_do_Amap%C3%A1.svg.png"></span>Amapá</td>
+        <td class="hb">802837</td>
+      </tr>
+      <tr>
+        <td><span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bandeira_de_Roraima.svg/480px-Bandeira_de_Roraima.svg.png"></span>Roraima</td>
+        <td class="hb">716793</td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
-        <th>Total de Habitantes</th>
+        <th scope="row">Total de Habitantes</th>
         <td id="resultado"></td>
         <script> /*.textContet acessa o texto dentro do elemento, pois, o getElementsByClassName retorna ELEMENTOS e não o texto presente!!*/
           let spHab = Number.parseInt(document.getElementsByClassName('hb')[0].textContent)
