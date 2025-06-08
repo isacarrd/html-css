@@ -179,15 +179,25 @@
       <tr>
         <th scope="row">Total de Habitantes</th>
         <td id="resultado"></td>
-        <script> /*.textContet acessa o texto dentro do elemento, pois, o getElementsByClassName retorna ELEMENTOS e não o texto presente!!*/
-          let spHab = Number.parseInt(document.getElementsByClassName('hb')[0].textContent)
-          let mgHab = Number.parseInt(document.getElementsByClassName('hb')[1].textContent)
-          let rjHab = Number.parseInt(document.getElementsByClassName('hb')[2].textContent)
-          let baHab = Number.parseInt(document.getElementsByClassName('hb')[3].textContent)
-          let prHab = Number.parseInt(document.getElementsByClassName('hb')[4].textContent)
+        <script> /* .textContet acessa o texto dentro do elemento, pois, o getElementsByClassName retorna ELEMENTOS e não o texto presente!! */
 
-          let soma = spHab + mgHab + rjHab + baHab + prHab;
-          resultado.innerHTML = soma.toLocaleString('pt-BR')
+          const populacoes = document.querySelectorAll('.hb'); /* seleciona todos os elementos da classe(.hb) e armazena-os na variável populacoes. */
+          let soma = 0; /* variável que armazenará a soma, contador inicializado com valor 0. */
+
+          /*  método forEach executa uma função para cada elemento da lista. */
+          populacoes.forEach(elementos =>{ /* (elementos) é uma ARROWFUNCTION, a qual define o que fazer com cada elemento (elementos) da lista. */
+
+            /* no caso, (elementos) representa uma variável de iteração, sendo um apelido temporário para representar cada elemento da lista durante o loop. */
+
+            const valor = parseInt(elementos.textContent); /* cria-se uma variável (valor) que converte os itens da lista (elementos) em números inteiros. */
+
+            if(!isNaN(valor)){ /* loop onde "se (valor) NÃO for um NaN, é um número válido" */
+              soma += valor;/* equivale à [soma = soma + valor]*/
+            }
+          }) /* a cada elemento onde o número for válido, será adicionado a variável soma! */
+
+
+          document.getElementById('resultado').textContent = soma.toLocaleString('pt-BR');
         </script>
       </tr>
     </tfoot>
